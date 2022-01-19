@@ -26,13 +26,13 @@ note = {
         22: 587.33
         }
 # piece = ["G4", "G4", "A4", "B4", "D5", "B4", "A4", "G4", "A4", "B4", "G4"]
-piece = [5, 5, 6, 7, 7, 6, 5, 4, 3, 3, ]
+piece = [1, 1, 5, 5, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1]
 
 for i in piece:
     PWM.start(BUZZER, duty_cycle = volume, frequency = note[i])
     time.sleep(0.5)
     PWM.set_duty_cycle(BUZZER, float(0.1))
-    time.sleep(0.05)
+    # time.sleep(0.001)
 
 
 PWM.stop(BUZZER)
